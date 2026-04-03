@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import Home from "./pages/Home";
 import Pricing from "./pages/Pricing";
 import Projects from "./pages/Projects";
@@ -10,9 +10,16 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
 const App = () => {
+  const { pathname } = useLocation();
+  const isNavbar =
+    (pathname.startsWith("/projects/") && pathname != "/projects") ||
+    pathname.startsWith("/view/") ||
+    pathname.startsWith("/preview/") ||
+    pathname.startsWith("/community/view");
   return (
     <div>
-      <Navbar />
+      {!isNavbar && <Navbar />}
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/pricing" element={<Pricing />} />
@@ -23,7 +30,7 @@ const App = () => {
         <Route path="/community" element={<Community />} />
         <Route path="/view/:projectId" element={<View />} />
       </Routes>
-      <Footer />
+      {!isNavbar && <Footer />}
     </div>
   );
 };
