@@ -1,1 +1,3 @@
 # wager.ai
+
+updated readme
