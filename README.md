@@ -1,4 +1,6 @@
 # wager.ai
 
 updated readme
-asdasdfasdfsadfdsfa
+asdasdfasdfsadfdsfaasdfasdfasd
+asdflhadfsafsdkjlfasdlkjfsadkjldjfsadkdkj]asdfklhasdfasldk
+aaaaaaaaaaaaaaaaaddddwecsdcswwedsssssss
